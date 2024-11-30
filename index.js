@@ -12,6 +12,12 @@ mongoose
   .then(() => console.log("Successfully connected to MongoDB"))
   .catch((err) => console.error("MongoDB connection error:", err));
 
+
+const postRoutes = require('./routes/posts');
+
+app.use('/posts', postRoutes);
+
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
