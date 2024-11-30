@@ -14,8 +14,10 @@ mongoose
 
 
 const postRoutes = require('./routes/posts');
+const commentRoutes = require('./routes/comments');
 
 app.use('/posts', postRoutes);
+app.use('/comments', commentRoutes);
 
 
 const PORT = process.env.PORT || 3000;
